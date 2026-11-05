@@ -4,7 +4,9 @@ books = {} # title -> {"author": str, "available": bool}
 def show_menu():
     print("\n=== Library Tracker ===")
     print("0. Exit")
+    print("1. Add Book")
     print("2. List Books")
+    print("3. Borrow Book")
 
 def add_books() -> None: 
     title = input("Enter the title of book: ")
@@ -14,6 +16,14 @@ def add_books() -> None:
         print(f"Added {title}")
     else:
         print(f"{title} is already in the library")
+
+def borrow_book() -> None:
+    title = input("Enter title of book you want to borrow: ")
+    if title in books:
+        books.pop(title)
+        print(f"you borrowed {title}")
+    else:
+        print("Not Available")
 
 
 def main():
