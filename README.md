@@ -1,5 +1,7 @@
 # Library Tracker
 A command-line program for tracking library books.
 ## Features
-- (none yet)
+added list_books features
+
 ## Contributors# SE-Lab-Evaluation
+Faiz (chotimau)
