@@ -33,13 +33,12 @@ def main():
         if choice == "0":
             print("Goodbye!")
             break
-
-        elif choice == "2":
-            list_books()
-
         elif choice == "1":
             add_books()
-
+        elif choice == "2":
+            list_books()
+        elif choice == "3":
+            borrow_book()
         else:
             print("Invalid option")
 
