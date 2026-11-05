@@ -3,7 +3,9 @@
 books = {} # title -> {"author": str, "available": bool}
 def show_menu():
     print("\n=== Library Tracker ===")
-    
+    print("0. Exit")
+    print("2. List Books")
+
 def main():
     while True:
         show_menu()
@@ -13,6 +15,8 @@ def main():
             break
         elif choice == "2":
             list_books()
+        else:
+            print("Invalid option")
 
 
 def list_books():
