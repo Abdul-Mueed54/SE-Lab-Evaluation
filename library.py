@@ -5,6 +5,8 @@ def show_menu():
     print("\n=== Library Tracker ===")
     print("0. Exit")
     print("2. List Books")
+    print("4. Return Books")
+    
 
 def add_books() -> None: 
     title = input("Enter the title of book: ")
@@ -15,6 +17,13 @@ def add_books() -> None:
     else:
         print(f"{title} is already in the library")
 
+def return_books() -> None:
+    title = input("Enter the title of the book to return: ")
+    if title in books:
+        books[title]["available"] = True
+        print(f"Returned title: '{title}'")
+    else:
+        print(f"No book titled '{title}'")
 
 def main():
     while True:
@@ -29,6 +38,9 @@ def main():
 
         elif choice == "1":
             add_books()
+
+        elif choice == "4":
+            return_books()
 
         else:
             print("Invalid option")
